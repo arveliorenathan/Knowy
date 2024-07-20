@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Knowy" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="fontFamily">@font/poppins</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+
+        <item name="colorContainer">@color/blue</item>
+        <item name="colorSecondaryContainer">@color/blue_light</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+
+        <item name="colorSurface">@color/blue</item>
+        <item name="colorOnSurfaceVariant">@color/blue</item>
+    </style>
+
+    <style name="Theme.Knowy" parent="Base.Theme.Knowy" />
+</resources>

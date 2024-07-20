@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_test">
+
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="com.capstone.knowy.ui.test.TestFragment"
+        android:label="@string/test"
+        tools:layout="@layout/fragment_test">
+        <action
+            android:id="@+id/action_test_to_forum_discussion"
+            app:destination="@id/navigation_forum_discussion" />
+        <action
+            android:id="@+id/action_test_to_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_forum_discussion"
+        android:name="com.capstone.knowy.ui.forum.discussion.ForumDiscussionFragment"
+        android:label="Forum Discussion"
+        tools:layout="@layout/fragment_forum_discussion">
+        <action
+            android:id="@+id/action_forum_discussion_to_test"
+            app:destination="@id/navigation_test" />
+        <action
+            android:id="@+id/action_forum_discussion_to_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.capstone.knowy.ui.profile.detail.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_test"
+            app:destination="@id/navigation_test" />
+        <action
+            android:id="@+id/action_profile_to_forum_discussion"
+            app:destination="@id/navigation_forum_discussion"/>
+    </fragment>
+
+
+</navigation>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_congrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/congrats"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_congrats"
+        app:layout_constraintStart_toStartOf="@+id/tv_congrats"
+        app:layout_constraintTop_toBottomOf="@+id/tv_congrats">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/score_progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorSize="90dp"
+            app:trackCornerRadius="20dp"
+            app:trackThickness="8dp"
+            tools:progress="60" />
+
+        <TextView
+            android:id="@+id/tv_score_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/percentage"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/title_score"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_congrats"
+        app:layout_constraintStart_toStartOf="@+id/tv_congrats"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/aptitude_score"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_congrats"
+        app:layout_constraintStart_toStartOf="@+id/tv_congrats"
+        app:layout_constraintTop_toBottomOf="@+id/tv_answer" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/finish"
+        app:layout_constraintEnd_toEndOf="@+id/tv_score"
+        app:layout_constraintStart_toStartOf="@+id/tv_score"
+        app:layout_constraintTop_toBottomOf="@+id/tv_score" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
